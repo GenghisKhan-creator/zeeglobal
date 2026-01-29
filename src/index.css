@@ -1,0 +1,65 @@
+@import "tailwindcss";
+
+@theme {
+    --color-primary-navy: #0A1128;
+    --color-accent-gold: #D4AF37;
+    --color-luxury-grey: #333333;
+    --color-cool-grey: #E5E5E5;
+    --color-design-teal: #9AC8CD;
+    --color-design-pink: #FFD1E3;
+
+    --font-heading: 'Oswald', sans-serif;
+    --font-body: 'Inter', sans-serif;
+}
+
+@layer base {
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        @apply bg-neutral-100 text-neutral-900 font-body overflow-x-hidden;
+        margin: 0;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        @apply font-heading uppercase;
+    }
+}
+
+@layer components {
+    .main-container {
+        @apply rounded-[3rem] bg-gradient-to-br from-[#E2F1E7] via-[#9AC8CD] to-[#FFD1E3] min-h-[95vh] m-4 md:m-8 relative overflow-hidden;
+    }
+
+    .pill-nav {
+        @apply bg-white rounded-full px-4 py-2 flex items-center shadow-sm;
+    }
+
+    .pill-link {
+        @apply px-6 py-2 rounded-full text-sm font-bold transition-all duration-300;
+    }
+
+    .pill-link-active {
+        @apply bg-black text-white;
+    }
+
+    .category-pill {
+        @apply px-8 py-3 rounded-full border border-white/40 text-sm font-bold tracking-widest uppercase text-white/80 hover:bg-white hover:text-black transition-all duration-500;
+    }
+
+    .benefit-card {
+        @apply flex items-start gap-6 py-6 border-b border-black/10;
+    }
+}
+
+.condensed-text {
+    @apply font-heading font-bold uppercase tracking-tighter leading-[0.85];
+}
