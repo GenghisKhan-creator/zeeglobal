@@ -77,7 +77,7 @@ const Hero = () => {
                         <img
                             src="/assets/3d/tradefair.png"
                             alt="Z-Hub Alpha"
-                            className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-1000 scale-110 group-hover:scale-100"
+                            className="w-full h-full object-cover md:grayscale group-hover:grayscale-0 transition-all duration-1000 scale-110 group-hover:scale-100"
                             onError={(e) => {
                                 e.target.src = "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=1000&auto=format&fit=crop";
                             }}

@@ -44,7 +44,7 @@ const Navbar = () => {
 
     return (
         <>
-            <nav className="absolute top-6 md:top-10 left-0 w-full z-[100] px-6 md:px-12 flex justify-between items-center">
+            <nav className="absolute top-6 md:top-10 left-0 w-full z-[120] px-6 md:px-12 flex justify-between items-center">
                 <div className="flex items-center gap-10">
                     <div className="pill-nav">
                         <Link to="/" className="flex items-center gap-2 mr-4 md:mr-6 scale-90 md:scale-100">
@@ -72,16 +72,16 @@ const Navbar = () => {
                     {/* Mobile Toggle */}
                     <button
                         onClick={() => setIsOpen(!isOpen)}
-                        className="md:hidden w-12 h-12 bg-black text-white rounded-full flex items-center justify-center shadow-xl z-[110]"
+                        className={`md:hidden w-12 h-12 rounded-full flex items-center justify-center shadow-2xl z-[130] transition-all duration-500 bg-black text-white hover:scale-110`}
                     >
-                        {isOpen ? <X size={20} /> : <Menu size={20} />}
+                        {isOpen ? <X size={20} className="rotate-0" /> : <Menu size={20} />}
                     </button>
                 </div>
             </nav>
 
-            {/* Mobile Fullscreen Menu */}
-            <div className="mobile-menu fixed inset-0 bg-neutral-100 z-[105] flex flex-col justify-center px-10 md:hidden" style={{ clipPath: 'circle(0% at 100% 0%)' }}>
-                <div className="flex flex-col gap-6">
+            {/* Mobile Fullscreen Menu - Restored to Neutral Color */}
+            <div className="mobile-menu fixed inset-0 bg-neutral-100 z-[110] flex flex-col justify-center px-10 md:hidden" style={{ clipPath: 'circle(0% at 100% 0%)' }}>
+                <div className="flex flex-col gap-6 mt-40">
                     <MobileNavLink to="/" label="Home" active={isActive('/')} />
                     <MobileNavLink to="/industrial" label="Industrial" active={isActive('/industrial')} />
                     <MobileNavLink to="/logistics" label="Logistics" active={isActive('/logistics')} />
@@ -89,9 +89,9 @@ const Navbar = () => {
                     <MobileNavLink to="/investors" label="Investors" active={isActive('/investors')} />
                 </div>
 
-                <div className="mt-20 border-t border-black/5 pt-10">
+                <div className="mt-15 border-t border-black/5 pt-10 mb-20">
                     <p className="text-[10px] font-black tracking-widest text-black/20 uppercase mb-4">Capital Management</p>
-                    <a href="mailto:invest@zeeglobal.com" className="text-xl font-bold uppercase tracking-tighter flex items-center gap-2">
+                    <a href="mailto:invest@zeeglobal.com" className="text-xl font-bold uppercase tracking-tighter flex items-center gap-2 text-black">
                         invest@zeeglobal.com <ArrowUpRight size={18} className="text-design-teal" />
                     </a>
                 </div>

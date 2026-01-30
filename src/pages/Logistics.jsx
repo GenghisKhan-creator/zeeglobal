@@ -125,7 +125,7 @@ const Logistics = () => {
                     <img
                         src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=2000&auto=format&fit=crop"
                         alt="Global Hub"
-                        className="w-full h-full object-cover grayscale brightness-110 md:group-hover:grayscale-0 transition-all duration-1000 md:scale-110 md:group-hover:scale-100"
+                        className="w-full h-full object-cover md:grayscale brightness-110 md:group-hover:grayscale-0 transition-all duration-1000 md:scale-110 md:group-hover:scale-100"
                     />
                     <div className="absolute top-6 md:top-10 right-6 md:right-10 flex gap-4">
                         <div className="w-10 h-10 md:w-12 md:h-12 bg-white rounded-full flex items-center justify-center shadow-lg animate-bounce">

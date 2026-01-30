@@ -173,7 +173,7 @@ const AllocationRow = ({ label, value, color }) => (
 const SiteCard = ({ title, location, completion, img }) => (
     <div className="bg-white rounded-[1.5rem] md:rounded-[2.5rem] p-4 border border-black/5 shadow-sm group cursor-pointer overflow-hidden">
         <div className="aspect-video rounded-[1rem] md:rounded-[2rem] overflow-hidden mb-6 md:mb-8 relative">
-            <img src={img} alt={title} className="w-full h-full object-cover grayscale md:group-hover:grayscale-0 transition-all duration-1000" />
+            <img src={img} alt={title} className="w-full h-full object-cover md:grayscale md:group-hover:grayscale-0 transition-all duration-1000" />
             <div className="absolute top-4 md:top-6 right-4 md:right-6 bg-white/90 backdrop-blur-md px-3 md:px-4 py-1.5 md:py-2 rounded-full text-[6px] md:text-[8px] font-black uppercase tracking-widest">
                 {completion} COMPLETE
             </div>

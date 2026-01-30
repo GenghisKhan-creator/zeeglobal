@@ -157,7 +157,7 @@ const EquipmentScrollCard = ({ img, title, specs }) => (
         <img
             src={img}
             alt={title}
-            className="w-full h-full object-cover grayscale brightness-90 group-hover:grayscale-0 md:group-hover:scale-110 transition-all duration-1000"
+            className="w-full h-full object-cover md:grayscale brightness-90 group-hover:grayscale-0 md:group-hover:scale-110 transition-all duration-1000"
             onError={(e) => {
                 e.target.src = "https://images.unsplash.com/photo-1541888946425-d81bb19480c5?q=80&w=1000";
             }}
